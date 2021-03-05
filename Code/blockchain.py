@@ -4,11 +4,17 @@ print("py")
 
 blockchain = []
 
-genesis_block = Block("previous_hash_demo",["transaction1","transaction2","transaction3"])
+genesis_block = Block("previous_hash_demo",["transaction1", "transaction2", "transaction3"])
 
-second_block=Block(genesis_block.block_hash,["transaction4","transaction5"])
+second_block = Block(genesis_block.block_hash, ["transaction4", "transaction5"])
+
+third_block = Block(second_block.block_hash, ["transaction6", "transaction7", "transaction8"])
 
 hash1 = hashlib.sha256("msg".encode()).hexdigest()
 
-print(hash1)
-print(genesis_block.block_hash)
+print("Hash of genesis block is {}".format(hash1))
+
+print("Hash of second block is {}".format(genesis_block.block_hash))
+
+print("Hash of third block is {}".format(third_block.block_hash))
+
