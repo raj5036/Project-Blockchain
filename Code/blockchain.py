@@ -1,6 +1,6 @@
 import hashlib
 from Block import Block
-print("py")
+
 
 blockchain = []
 
@@ -10,7 +10,6 @@ second_block = Block(genesis_block.block_hash, ["transaction4", "transaction5"])
 
 third_block = Block(second_block.block_hash, ["transaction6", "transaction7", "transaction8"])
 
-hash1 = hashlib.sha256("msg".encode()).hexdigest()
 
 print("Hash of genesis block is {}".format(hash1))
 
