@@ -18,12 +18,11 @@ contract MyContract{
     }
     
     function multiply() public view returns(int){
-        return a-b;
+        return a*b;
     }
     
-    function division() public view returns(int){
-        return a/b;
+    function mod() public view returns(int){
+        return a%b;
     }
 
-    enum Name {item1, item2 }
 }
