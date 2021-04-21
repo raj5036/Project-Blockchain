@@ -24,4 +24,6 @@ contract MyContract{
     function division() public view returns(int){
         return a/b;
     }
+
+    enum Name {item1, item2 }
 }
